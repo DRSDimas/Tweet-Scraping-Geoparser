@@ -9,7 +9,7 @@ There are many ways to get data from X (Twitter), including powerful paid APIs a
  * The purpose of this tool is to map the volume and intensity of online discussion surrounding these **known locations, not to discover new ones**. This approach was chosen for its reliability and accuracy, as it avoids the errors and false positives that more advanced methods can sometimes produce.
   * **Use a Burner Account**, because this kind of automated activity is against X's (Twitter's) terms of service. **DO NOT use your personal X account for this.** The account you use is at high risk of being temporarily or permanently banned. Create a new, disposable "burner" account specifically for this project.
   * This tool scrapes public data. Be responsible and ethical with how you use, analyze, and present the information you collect.
-  * This project is intended for educational and research purposes to understand the dynamics of social media data and geospatial analysis.
+  * This project is intended for educational and research purposes to understand the dynamics of social media data and geospatial analysis, *SO BE RESPONSIBLE*.
 
 ## Getting Started
 
