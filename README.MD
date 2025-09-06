@@ -69,32 +69,32 @@ This project uses a two-stage process to ensure the final data is both comprehen
 
 First, we scrape X (Twitter) for a large number of tweets that are thematically related to the event, without initially filtering for location.
 
-1.  Open `scraper_thematic.py` in your code editor.
+1.  Open `scraper.py` in your code editor.
 2.  Modify the `PROTEST_KEYWORDS` list and the `START_DATE`/`END_DATE` to match your event.
 3.  Run the script from your activated terminal:
     ```sh
-    python scraper_thematic.py
+    python scraper.py
     ```
-    This will produce a CSV file (e.g., `thematic_tweets.csv`) containing thousands of tweets that are generally about the protest but may or may not mention a specific location.
+    This will produce a CSV file (e.g., `tweets.csv`) containing thousands of tweets that are generally about the protest but may or may not mention a specific location.
 
 ### Step 2: Geographic Parsing and Filtering
 
 Next, we process the large, "noisy" file from Step 1. This script will read every tweet and act as a filter, keeping only the ones that contain a specific, known location from your research.
 
-1.  Open `geoparser_simple.py`.
+1.  Open `geoparser.py`.
 2.  Update the `DEFINITIVE_LOCATIONS` dictionary with the precise names, keywords, and coordinates for your specific project.
-3.  Make sure the `input_filename` in the script matches the output file from the scraper (e.g., `"thematic_tweets.csv"`).
+3.  Make sure the `input_filename` in the script matches the output file from the scraper (e.g., `"tweets.csv"`).
 4.  Run the script:
     ```sh
-    python geoparser_simple.py
+    python geoparser.py
     ```
-    This will produce your final, clean dataset (e.g., `simple_map_data.csv`), which is now ready for visualization in ArcGIS Pro, QGIS, or other mapping software.
+    This will produce your final, clean dataset (e.g., `map_data.csv`), which is now ready for visualization in ArcGIS Pro, QGIS, or other mapping software.
 
 -----
 
-## Limitations and Best Practices
+## Other Limitations and Best Practices
 
   * X is very good at detecting automated activity. The script uses a batching method to break up searches and includes cool-down periods to seem more human (yes, it is what it is), but it can still be blocked.
-  * The script is designed to search for a small number of keywords at a time (`CHUNK_SIZE`). Do not set this number too high (5-8 is a good range). Searching for 30+ keywords at once will likely fail, since X would rate-limit your account during midscraping.
+  * You can modify your script to search for a small number of keywords at a time. It is not recommended not set this chunk size number too high (5-8 keywords is a good range). Searching for 30+ keywords at once will likely fail, since X would rate-limit your account during midscraping.
   * If the script suddenly stops working and fails on every batch, X has likely rate-limited or "poisoned" your account's session. The best solution is to **log out and log back in** to your burner account, get a **new `auth_token`**, and update your `cookies.json` file. Sometimes, you may need to create a completely new burner account.
   * This method scrapes the "Top" search results for a given query and date range. It does not capture an exhaustive archive of every single tweet ever posted. The results are what X's algorithm considers most relevant.
