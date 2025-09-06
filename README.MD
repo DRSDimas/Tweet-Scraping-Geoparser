@@ -2,7 +2,7 @@
 
 This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to map the online outcry surrounding a real-world event. For example, I'm using it for mapping the digital footprint of a mass demonstration, standoff, public outcry, and general chaos surrounding the 29th-30th August 2025 Protest in Jakarta, Indonesia.
 
-There are many ways to get data from X (Twitter), including powerful paid APIs and services that are faster, more efficient, and obviously scrape much more data. However, most of these require paid subscriptions or pre-purchased fleets of "safe" accounts for scraping. This project, however, was built to provide a **COMPLETELY FREE, ZERO-BUDGET SOLUTION**. It's designed for anyone using a budget computer who wants to perform this kind of analysis without any financial cost.
+There are many ways to get data from X (Twitter), including powerful paid APIs and services that are faster, more efficient, and obviously scrape much more data. However, most of these require paid subscriptions or pre-purchased fleets of "safe" accounts for scraping. This project, however, was built to provide a **COMPLETELY FREE, ZERO-BUDGET SOLUTION**, by utilizing the **playwright** Python library.. It's designed for anyone using a budget computer who wants to perform this kind of analysis without any financial cost.
 
 ## Important Disclaimer
   * It is critical to understand that this script performs a **CONFIRMATORY ANALYSIS, NOT AN EXPLORATORY ONE**. The `geoparser.py` script is not an advanced AI that can automatically detect and discover new, unknown locations from tweet text (I can't make it yet, probably in the future). It can only find locations that you have pre-defined in its (`DEFINITIVE_LOCATIONS`) dictionary. 
