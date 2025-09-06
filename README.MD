@@ -4,7 +4,7 @@ This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to
 
 There are many ways to get data from X (Twitter), including powerful paid APIs and services that are faster, more efficient, and obviously scrape much more data. However, most of these require paid subscriptions or pre-purchased fleets of "safe" accounts for scraping. This project, however, was built to provide a **completely free, zero-budget solution**. It's designed for anyone using a budget computer who wants to perform this kind of analysis without any financial cost.
 
-## ⚠️ Important Disclaimer
+## Important Disclaimer
 
   * **Use a Burner Account**, because this kind of automated activity is against X's (Twitter's) terms of service. **DO NOT use your personal X account for this.** The account you use is at high risk of being temporarily or permanently banned. Create a new, disposable "burner" account specifically for this project.
   * This tool scrapes public data. Be responsible and ethical with how you use, analyze, and present the information you collect.
