@@ -1,0 +1,8 @@
+[
+  {
+    "name": "auth_token",
+    "value": "your_cookies",
+    "domain": ".x.com",
+    "path": "/"
+  }
+]
