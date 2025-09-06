@@ -36,7 +36,6 @@ Follow these steps to get the project up and running on your local machine.
     ```
 3.  **Activate the virtual environment.**
       * On Windows (PowerShell): `.\venv\Scripts\Activate`
-      * On macOS/Linux: `source venv/bin/activate`
 4.  **Install the required libraries.**
     ```sh
     pip install pandas playwright
