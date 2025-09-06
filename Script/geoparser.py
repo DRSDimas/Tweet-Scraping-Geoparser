@@ -3,8 +3,7 @@ import os
 import re
 
 DEFINITIVE_LOCATIONS = {
-    # State Institutions & Police HQs
-    "Parliamentary Complex": {"lat": -6.2098, "lon": 106.8002, "keywords": ["dpr", "mpr", "parliamentary complex"]},
+    "Kompleks Parlemen": {"lat": -6.2098, "lon": 106.8002, "keywords": ["dpr", "mpr", "parliamentary complex"]},
     "Mako Brimob Kwitang": {"lat": -6.181, "lon": 106.838, "keywords": ["mako brimob", "kwitang"]},
     "Polda Metro Jaya": {"lat": -6.2214, "lon": 106.8098, "keywords": ["polda metro jaya", "polda"]},
     "Mabes Polri": {"lat": -6.2398, "lon": 106.8015, "keywords": ["mabes polri"]},
@@ -12,7 +11,6 @@ DEFINITIVE_LOCATIONS = {
     "Bekas Gedung Mapolres Jakpus": {"lat": -6.1838, "lon": 106.8457, "keywords": ["mapolres jakpus"]},
     "Kejaksaan Agung": {"lat": -6.2401, "lon": 106.7983, "keywords": ["kejaksaan agung"]},
     
-    # Police Sub-precincts (Polsek) & Posts
     "Polsek Duren Sawit": {"lat": -6.237, "lon": 106.908, "keywords": ["polsek duren sawit"]},
     "Polsek Jatinegara": {"lat": -6.222, "lon": 106.87, "keywords": ["polsek jatinegara"]},
     "Polsek Matraman": {"lat": -6.205, "lon": 106.86, "keywords": ["polsek matraman"]},
@@ -23,7 +21,6 @@ DEFINITIVE_LOCATIONS = {
     "Pos Polisi GBK/Kemenpora": {"lat": -6.218, "lon": 106.803, "keywords": ["pos polisi gbk", "pos polisi kemenpora"]},
     "Pos Polisi Senayan": {"lat": -6.226, "lon": 106.7991, "keywords": ["pos polisi senayan"]},
 
-    # Major Roads & Intersections
     "Jalan Gatot Subroto": {"lat": -6.2251, "lon": 106.8174, "keywords": ["gatot subroto", "gatsu"]},
     "Jalan Sudirman": {"lat": -6.2214, "lon": 106.8098, "keywords": ["sudirman"]},
     "Jalan Asia Afrika": {"lat": -6.226, "lon": 106.7991, "keywords": ["asia afrika"]},
@@ -32,7 +29,6 @@ DEFINITIVE_LOCATIONS = {
     "Jalan Casablanca": {"lat": -6.226, "lon": 106.838, "keywords": ["casablanca"]},
     "Tugu Tani": {"lat": -6.1827, "lon": 106.8347, "keywords": ["tugu tani"]},
 
-    # Toll Gates
     "Tol Pejompongan": {"lat": -6.2015, "lon": 106.8077, "keywords": ["tol pejompongan"]},
     "Tol Slipi": {"lat": -6.196, "lon": 106.8, "keywords": ["tol slipi"]},
     "Tol Senayan": {"lat": -6.218, "lon": 106.804, "keywords": ["tol senayan"]},
@@ -40,7 +36,6 @@ DEFINITIVE_LOCATIONS = {
     "Tol Kuningan": {"lat": -6.2246, "lon": 106.8296, "keywords": ["tol kuningan"]},
     "Gerbang Pemuda": {"lat":-6.2125, "lon": 106.8036, "keywords": ["gerbang pemuda"]},
 
-    # TransJakarta Shelters (Halte)
     "Halte Polda": {"lat": -6.2214, "lon": 106.8098, "keywords": ["halte polda"]},
     "Halte Senen Toyota Rangga": {"lat": -6.178, "lon": 106.843, "keywords": ["halte senen toyota", "halte rangga"]},
     "Halte Sentral Senen": {"lat": -6.178, "lon": 106.843, "keywords": ["halte sentral senen"]},
@@ -61,14 +56,12 @@ DEFINITIVE_LOCATIONS = {
     "Halte Masjid Agung": {"lat": -6.233, "lon": 106.797, "keywords": ["halte masjid agung"]},
     "Halte GBK": {"lat": -6.2237, "lon": 106.8059, "keywords": ["halte gelora bung karno", "halte gbk"]},
 
-    # Rail & MRT Stations
     "Stasiun Tanah Abang": {"lat": -6.1855, "lon": 106.8105, "keywords": ["stasiun tanah abang"]},
     "Stasiun Palmerah": {"lat": -6.2077, "lon": 106.798, "keywords": ["stasiun palmerah"]},
     "Stasiun MRT Istora": {"lat": -6.2223, "lon": 106.8085, "keywords": ["stasiun istora", "mrt istora"]},
     "Stasiun MRT ASEAN": {"lat": -6.237, "lon": 106.798, "keywords": ["stasiun asean", "mrt asean"]},
     "Stasiun Pasar Senen": {"lat": -6.1744, "lon": 106.8444, "keywords": ["stasiun pasar senen"]},
 
-    # Gathering Points & Other Locations
     "Rumah Duka Affan": {"lat": -6.195, "lon": 106.834, "keywords": ["rumah duka affan", "menteng"]},
     "TPU Karet Bivak": {"lat": -6.2026, "lon": 106.8141, "keywords": ["karet bivak", "tpu karet"]},
     "FX Sudirman Mall": {"lat": -6.225, "lon": 106.805, "keywords": ["fx sudirman"]},
