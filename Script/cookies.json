@@ -1,0 +1,8 @@
+[
+  {
+    "name": "auth_token",
+    "value": "PASTE_YOUR_TOKEN_HERE",
+    "domain": ".x.com",
+    "path": "/"
+  }
+]
