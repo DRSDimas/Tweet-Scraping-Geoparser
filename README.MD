@@ -1,6 +1,6 @@
 # X (Twitter) Event Heatmap Scraper
 
-This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to map the online discussion surrounding a real-world event. For example, I'm using it for mapping the digital footprint of a mass demonstration, standoff, public outcry, and general chaos surrounding the 29th-30th August 2025 Protest in Jakarta, Indonesia.
+This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to map the online outcry surrounding a real-world event. For example, I'm using it for mapping the digital footprint of a mass demonstration, standoff, public outcry, and general chaos surrounding the 29th-30th August 2025 Protest in Jakarta, Indonesia.
 
 There are many ways to get data from X (Twitter), including powerful paid APIs and services that are faster, more efficient, and obviously scrape much more data. However, most of these require paid subscriptions or pre-purchased fleets of "safe" accounts for scraping. This project, however, was built to provide a **COMPLETELY FREE, ZERO-BUDGET SOLUTION**. It's designed for anyone using a budget computer who wants to perform this kind of analysis without any financial cost.
 
