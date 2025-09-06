@@ -60,34 +60,36 @@ To bypass the login wall, the script needs to use an authentication cookie from 
       }
     ]
     ```
-
 ## Usage
 
-The process is two steps. First, you scrape the data, then you geoparse it.
+This project uses a two-stage process to ensure the final data is both comprehensive and geographically relevant.
 
-### Step 1: Configure and Run the Scraper
+### Step 1: Broad Thematic Scraping
 
-1.  Open `scraper.py` in your code editor.
-2.  Modify the **Configuration** section at the top:
-      * **`PROTEST_KEYWORDS`**: A list of thematic keywords related to your event.
-      * **`LOCATION_KEYWORDS`**: A list of specific location names you want to search for.
-      * **`START_DATE`** and **`END_DATE`**: The time period for your search.
+First, we scrape X (Twitter) for a large number of tweets that are thematically related to the event, without initially filtering for location.
+
+1.  Open `scraper_thematic.py` in your code editor.
+2.  Modify the `PROTEST_KEYWORDS` list and the `START_DATE`/`END_DATE` to match your event.
 3.  Run the script from your activated terminal:
     ```sh
-    python scraper.py
+    python scraper_thematic.py
     ```
-    This will produce a CSV file (e.g., `hybrid_tweets.csv`) containing all the tweets that matched your criteria.
+    This will produce a CSV file (e.g., `thematic_tweets.csv`) containing thousands of tweets that are generally about the protest but may or may not mention a specific location.
 
-### Step 2: Configure and Run the Geoparser
+### Step 2: Geographic Parsing and Filtering
+
+Next, we process the large, "noisy" file from Step 1. This script will read every tweet and act as a filter, keeping only the ones that contain a specific, known location from our research.
 
 1.  Open `geoparser_simple.py`.
-2.  Inside the script, the `DEFINITIVE_LOCATIONS` dictionary should contain the known coordinates for the locations you are interested in. Update this dictionary to match your specific project.
-3.  Make sure the `input_filename` in the script matches the output file from the scraper.
+2.  Update the `DEFINITIVE_LOCATIONS` dictionary with the precise names, keywords, and coordinates for your specific project.
+3.  Make sure the `input_filename` in the script matches the output file from the scraper (e.g., `"thematic_tweets.csv"`).
 4.  Run the script:
     ```sh
     python geoparser_simple.py
     ```
-    This will read your scraped tweets, filter them for the locations in your dictionary, and produce a final, clean `final_map_data.csv` file, ready for visualization in ArcGIS Pro, QGIS, or other mapping software.
+    This will produce your final, clean dataset (e.g., `simple_map_data.csv`), which is now ready for visualization in ArcGIS Pro, QGIS, or other mapping software.
+
+-----
 
 ## Limitations and Best Practices
 
