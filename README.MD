@@ -1,28 +1,14 @@
-Of course. Creating a good `README.md` is crucial for sharing your project. It explains the "what, why, and how" to other users.
-
-Based on our entire journey and your specific requests, here is a complete `README.md` file that you can copy and paste into your GitHub repository.
-
------
-
 # X (Twitter) Event Heatmap Scraper
-
-A zero-budget, beginner-friendly toolkit for scraping location-specific tweets and processing them into a dataset ready for geospatial visualization (e.g., a heatmap).
-
-*(You can replace this with a screenshot of your own final map\!)*
-
-## About The Project
 
 This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to map the online discussion surrounding a real-world event.
 
-There are many ways to get data from X (Twitter), including powerful paid APIs and services that are faster and more efficient. However, most of these require paid subscriptions or pre-purchased accounts.
-
-This project was built with a different philosophy: to provide a **completely free, zero-budget solution**. It's designed for students, researchers, or hobbyists using a standard computer who want to perform this kind of analysis without any financial cost.
+There are many ways to get data from X (Twitter), including powerful paid APIs and services that are faster, more efficient, and obviously scrape much more data. However, most of these require paid subscriptions or pre-purchased fleets of "safe" accounts for scraping. This project, however, was built to provide a **completely free, zero-budget solution**. It's designed for anyone using a budget computer who wants to perform this kind of analysis without any financial cost.
 
 ## ⚠️ Important Disclaimer
 
-  * **Use a Burner Account:** Automated activity is against X's (Twitter's) terms of service. **DO NOT use your personal X account for this.** The account you use is at high risk of being temporarily or permanently banned. Create a new, disposable "burner" account specifically for this project.
-  * **Ethical Considerations:** This tool scrapes public data. Be responsible and ethical with how you use, analyze, and present the information you collect.
-  * **For Educational Purposes:** This project is intended for educational and research purposes to understand the dynamics of social media data and geospatial analysis.
+  * **Use a Burner Account**, because this kind of automated activity is against X's (Twitter's) terms of service. **DO NOT use your personal X account for this.** The account you use is at high risk of being temporarily or permanently banned. Create a new, disposable "burner" account specifically for this project.
+  * This tool scrapes public data. Be responsible and ethical with how you use, analyze, and present the information you collect.
+  * This project is intended for educational and research purposes to understand the dynamics of social media data and geospatial analysis.
 
 ## Getting Started
 
@@ -77,7 +63,7 @@ To bypass the login wall, the script needs to use an authentication cookie from 
 
 ## Usage
 
-The process is two steps: first you scrape the data, then you parse it.
+The process is two steps. First, you scrape the data, then you geoparse it.
 
 ### Step 1: Configure and Run the Scraper
 
@@ -105,7 +91,7 @@ The process is two steps: first you scrape the data, then you parse it.
 
 ## Limitations and Best Practices
 
-  * **Bot Detection is Aggressive**: X is very good at detecting automated activity. The script uses a batching method to break up searches and includes cool-down periods to seem more human, but it can still be blocked.
-  * **Batching is Key**: The script is designed to search for a small number of keywords at a time (`CHUNK_SIZE`). Do not set this number too high (5-8 is a good range). Searching for 30+ keywords at once will likely fail.
-  * **"Poisoned" Cookies**: If the script suddenly stops working and fails on every batch, X has likely rate-limited or "poisoned" your account's session. The best solution is to **log out and log back in** to your burner account, get a **new `auth_token`**, and update your `cookies.json` file. Sometimes, you may need to create a completely new burner account.
-  * **"Top" Search Results**: This method scrapes the "Top" search results for a given query and date range. It does not capture an exhaustive archive of every single tweet ever posted. The results are what X's algorithm considers most relevant.
+  * X is very good at detecting automated activity. The script uses a batching method to break up searches and includes cool-down periods to seem more human, but it can still be blocked.
+  * The script is designed to search for a small number of keywords at a time (`CHUNK_SIZE`). Do not set this number too high (5-8 is a good range). Searching for 30+ keywords at once will likely fail, since X would rate-limit your account during midscraping.
+  * If the script suddenly stops working and fails on every batch, X has likely rate-limited or "poisoned" your account's session. The best solution is to **log out and log back in** to your burner account, get a **new `auth_token`**, and update your `cookies.json` file. Sometimes, you may need to create a completely new burner account.
+  * This method scrapes the "Top" search results for a given query and date range. It does not capture an exhaustive archive of every single tweet ever posted. The results are what X's algorithm considers most relevant.
