@@ -78,7 +78,7 @@ First, we scrape X (Twitter) for a large number of tweets that are thematically 
 
 ### Step 2: Geographic Parsing and Filtering
 
-Next, we process the large, "noisy" file from Step 1. This script will read every tweet and act as a filter, keeping only the ones that contain a specific, known location from our research.
+Next, we process the large, "noisy" file from Step 1. This script will read every tweet and act as a filter, keeping only the ones that contain a specific, known location from your research.
 
 1.  Open `geoparser_simple.py`.
 2.  Update the `DEFINITIVE_LOCATIONS` dictionary with the precise names, keywords, and coordinates for your specific project.
