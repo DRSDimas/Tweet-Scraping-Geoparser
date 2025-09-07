@@ -1,6 +1,6 @@
 # X (Twitter) Event Heatmap Scraper
 
-This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to map the online outcry surrounding a real-world event. For example, I'm using it for mapping the digital footprint of a mass demonstration, standoff, public outcry, and general chaos surrounding the 29th-30th August 2025 Protest in Jakarta, Indonesia.
+This repository provides two Python scripts (`scraper.py` and `geoparser.py`) to map the online outcry surrounding a real-world event. For example, I'm using it for mapping the digital footprint of a mass demonstration, standoff, arson, looting, and general chaos surrounding the 29th-30th August 2025 Protest in Jakarta, Indonesia.
 
 ![Heatmap Example](./Jakarta%20Heatmap.png)
 
